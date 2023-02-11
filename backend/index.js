@@ -16,7 +16,6 @@ mongoose
   "mongodb+srv://manthanank:" +
     process.env.MONGO_ATLAS_PW +
     "@cluster0.re3ha3x.mongodb.net/social-media"
-  // "mongodb+srv://max:QuBqs0T45GDKPlIG@cluster0-ntrwp.mongodb.net/node-angular?retryWrites=true"
 )
 .then(() => {
   console.log("Connected to database!");
