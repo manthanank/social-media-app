@@ -24,7 +24,6 @@ mongoose
   console.log("Connection failed!");
 });
 
-
 const path = require('path')
 app.use('/', express.static(path.join(__dirname, 'public')))
 
