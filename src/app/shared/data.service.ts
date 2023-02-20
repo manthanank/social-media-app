@@ -6,21 +6,21 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  loginUrl = 'https://social-media-backend-f7ge.onrender.com/api/auth/login';
-  signupUrl = 'https://social-media-backend-f7ge.onrender.com/api/auth/register';
+  loginUrl = 'https://social-media-app-sdmc.onrender.com/api/auth/login';
+  signupUrl = 'https://social-media-app-sdmc.onrender.com/api/auth/register';
 
-  getusersUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id';
-  updateusersUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id';
-  deleteusersUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id';
-  followusersUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id/unfollow';
-  unfollowusersUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id/follow';
+  getusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
+  updateusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
+  deleteusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
+  followusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id/unfollow';
+  unfollowusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id/follow';
 
-  postsUrl = 'https://social-media-backend-f7ge.onrender.com/api/posts/';
-  updatepostsUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id';
-  deletepostsUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id';
-  likepostsUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id/like';
-  getpostsUrl = 'https://social-media-backend-f7ge.onrender.com/api/users/:id';
-  timelineallpostsUrl = 'https://social-media-backend-f7ge.onrender.com/api/posts/timeline/all';
+  postsUrl = 'https://social-media-app-sdmc.onrender.com/api/posts/';
+  updatepostsUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
+  deletepostsUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
+  likepostsUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id/like';
+  getpostsUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
+  timelineallpostsUrl = 'https://social-media-app-sdmc.onrender.com/api/posts/timeline/all';
 
   constructor(private http: HttpClient) { }
 
