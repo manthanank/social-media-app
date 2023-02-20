@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
+const BACKEND_URL = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
-  loginUrl = 'https://social-media-app-sdmc.onrender.com/api/auth/login';
-  signupUrl = 'https://social-media-app-sdmc.onrender.com/api/auth/register';
 
   getusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
   updateusersUrl = 'https://social-media-app-sdmc.onrender.com/api/users/:id';
@@ -23,13 +23,6 @@ export class DataService {
   timelineallpostsUrl = 'https://social-media-app-sdmc.onrender.com/api/posts/timeline/all';
 
   constructor(private http: HttpClient) { }
-
-  login(data: any){
-    return this.http.post(this.loginUrl, data);
-  }
-  signup(data: any){
-    return this.http.post(this.signupUrl, data);
-  }
 
   followUser(data: any){
     return this.http.put(this.followusersUrl,data)

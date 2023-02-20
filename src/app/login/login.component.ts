@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { DataService } from '../shared/data.service';
+import { AuthService } from '../shared/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -15,15 +15,15 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
   
-  constructor(private http: HttpClient, private dataService: DataService) { }
+  constructor(private http: HttpClient, private authService: AuthService) { }
 
   ngOnInit() {
 
   }
 
   onLogin() {
-    console.log(this.loginForm.value);
-    this.dataService.login(this.loginForm.value).subscribe(data => {
+    // console.log(this.loginForm.value);
+    this.authService.login(this.loginForm.value).subscribe(data => {
       console.log(data);
     })
   }

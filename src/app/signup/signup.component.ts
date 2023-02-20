@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { DataService } from '../shared/data.service';
+import { AuthService } from '../shared/auth/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
     password: new FormControl(''),
   });
   
-  constructor(private http: HttpClient, private dataservice: DataService) { }
+  constructor(private http: HttpClient, private authservice: AuthService) { }
 
   ngOnInit() {
 
@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signupForm.value);
-    this.dataservice.signup(this.signupForm.value).subscribe(data => {
+    this.authservice.signup(this.signupForm.value).subscribe(data => {
       console.log(data);
     })
   }
