@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require("express");
 const app = express()
 const port = process.env.PORT | 3000 
 const mongoose = require("mongoose");
@@ -6,7 +6,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const multer = require("multer");
-const path = require('path');
+const path = require("path");
 
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
